@@ -1,0 +1,21 @@
+# mengimport package pyTelegramBotAPI
+import telebot
+
+# inisialisasi Token Bot Kita
+bot = telebot.TeleBot('5237481582:AAHcYdsVjqMcHHpnxOHpMq4WrW-9Dlm3H5E')
+
+# Menghandle Pesan /start
+@bot.message_handler(commands=['halo'])
+def welcome(message):
+    # membalas pesan
+    bot.reply_to(message, 'Halo bro, ada apa?')
+@bot.message_handler(commands=['p'])
+def welcome(message):
+    # membalas pesan
+    bot.reply_to(message, 'ppppppp pantek')
+
+while True:
+    try:
+        bot.polling()
+    except:
+        pass
